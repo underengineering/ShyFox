@@ -13,14 +13,8 @@ findbar{
   z-index: 5 !important;
   
   bottom: calc(var(--bottom-margin) + var(--margin));
-  left: calc(
-    (
-      100vw
-      - var(--findbar-wdt)
-      - var(--left-margin)
-      - var(--right-margin)
-    ) / 2
-  );
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   
   height: calc(var(--toolbar-item-hgt) * 2);
   padding-top: var(--toolbar-item-hgt) !important;
