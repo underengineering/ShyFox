@@ -83,7 +83,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   
   /* pick browser colors */                                           /* used for:          */ 
   --bg-col: var(--lwt-accent-color, var(--ActiveCaption, tomato));    /* darker background  */       /* tomato is the fallback color */
-  --tb-col: var(--toolbar-bgcolor, tomato);                           /* lighter background */       /* meaning something went wrong */
+  --tb-col: var(--toolbar-background-color, tomato);                  /* lighter background */       /* meaning something went wrong */
   --bt-col: var(--toolbarbutton-icon-fill);                           /* text or icons      */
   --pp-col: var(--arrowpanel-background);                             /* popup color        */
   
