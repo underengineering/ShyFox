@@ -179,7 +179,7 @@ richlistbox {
 /* disable pointer events in clean mode */
 #main-window[titlepreface*="‍"] {
 
-    #nav-bar:not(:has(#urlbar[breakout-extend])),
+    #nav-bar:not(:has(#urlbar[open])),
     #sidebar,
     #TabsToolbar,
     #PersonalToolbar {
@@ -534,6 +534,7 @@ File Edit View History Bookmarks Tools Help
 
         width: -fit-content;
         max-height: 0px;
+        min-height: 0px;
         padding-bottom: 0 !important;
 
         transition: var(--transition) !important;
@@ -548,8 +549,12 @@ File Edit View History Bookmarks Tools Help
             opacity: var(--dyn-opct);
         }
 
-        /* outline only when visible */
-        &:not([inactive="true"]) {
+        /* reveal on Alt (autohide mode) or when a menu is focused/open (always-show mode) */
+        &:is([autohide="true"]:not([inactive="true"]),
+            :focus-within,
+            :has([_moz-menuactive], [open])) {
+            max-height: 40px;
+            min-height: 20px;
             border: var(--outline) !important;
             outline: var(--shadow) !important;
         }

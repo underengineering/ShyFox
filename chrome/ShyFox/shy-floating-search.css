@@ -9,7 +9,7 @@ Cool floating search panel
 @media not -moz-pref("shyfox.disable.floating.search") {
 
     /* styles for urlbar */
-    #urlbar[breakout-extend] {
+    #urlbar[open] {
 
         #urlbar-input {
             font-size: 23.5px !important;
