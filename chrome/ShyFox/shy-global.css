@@ -534,8 +534,10 @@ File Edit View History Bookmarks Tools Help
 
         width: -fit-content;
         max-height: 0px;
-        min-height: 0px;
-        padding-bottom: 0 !important;
+        min-height: 0px !important;
+        padding-block: 0 !important;
+        border-width: 0 !important;
+        outline: none !important;
 
         transition: var(--transition) !important;
 
@@ -553,8 +555,9 @@ File Edit View History Bookmarks Tools Help
         &:is([autohide="true"]:not([inactive="true"]),
             :focus-within,
             :has([_moz-menuactive], [open])) {
-            max-height: 40px;
-            min-height: 20px;
+            max-height: 40px !important;
+            min-height: 20px !important;
+            padding-top: 1px !important;
             border: var(--outline) !important;
             outline: var(--shadow) !important;
         }
